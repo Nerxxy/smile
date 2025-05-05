@@ -1,0 +1,157 @@
+/* --------------------------------Personal Changes-------------------------------- */
+
+/*
+Background Blur
+*/
+#app-mount>div:has([class*="app"]) {
+    backdrop-filter: blur(8px);
+}
+
+/* body > :nth-child(1) > div[class]:not([data-windows]) {
+    backdrop-filter: blur(5px) !important;
+} */
+
+/* 
+Time and Date
+*/
+.visual-refresh .container__7641b,
+#dv-mount {
+    background-color: transparent !important;
+}
+
+/* 
+Not Sure
+*/
+.visual-refresh .container__34c2c {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+.visual-refresh .container_faa96b.isOpen_faa96b {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #3d3867;
+}
+
+/*
+Remove Nitro Tab
+*/
+[href="/store"],
+[href="/shop"] {
+    display: none;
+}
+
+/* 
+Weird Padding Around Servers And Read All
+*/
+.stack_dbd263.scroller_ef3116.none_d125d2.scrollerBase_d125d2>.listItem__650eb {
+    margin: 0px;
+    margin-top: -5px;
+    padding: 0px;
+    margin-bottom: 0px !important;
+}
+
+/* 
+Menu Backgrounds
+*/
+[role="menu"] {
+    background-color: rgba(var(--black1), .5);
+    backdrop-filter: blzur(1px);
+}
+
+/* 
+Message Divider
+*/
+[class*="divider"][class*="isUnread"] {
+    border-color: #7700ff;
+}
+[data-list-id="chat-messages"]>[role="separator"]> :nth-child(1):not([class*="endCap"]) {
+    margin-top: -15px;
+    margin-right: auto;
+    color: #7289da;
+    opacity: 0.6;
+    filter: brightness(1.2);
+}
+[data-list-id="chat-messages"]>[role="separator"] {
+    border-color: #7700ff;
+}
+.visual-refresh .content__908e2 {
+    background-color: rgba(var(--white1), .0) !important;
+}
+[data-list-id*="chat-"]>[role*="sep"]>[class*="end"] {
+    background-color: #7700ff;
+}
+[data-list-id*="chat-"]>[role*="sep"]>[class*="end"]>svg>path {
+    fill: #7700ff;
+    color: #7700ff;
+}
+
+/* 
+Read All Button
+*/
+[data-list-id="guildsnav"]>div> :nth-child(1)>[class*=frame] [class*="button"] {
+    background-color: rgba(var(--white1), .1) !important;
+}
+
+/* 
+New Messages Bar
+*/
+[class*="newMessagesBar"] {
+    background-color: #4b00a1;
+}
+
+/* 
+Title Bar
+*/
+[data-windows="true"]>[class*="title"]>div> :nth-child(1) {
+    display: none;
+}
+[data-windows="true"]>[class*="title"]>div>div {
+    visibility: hidden;
+}
+[data-windows="true"]>[class*="title"]>div>div:after {
+    visibility: visible;
+    content: "Nerxxy";
+    font-family: Karla;
+    font-size: 18px;
+}
+/* 
+Personal Nameplate
+*/
+[class*="member_"]:has([aria-label*="nerxxy."]) {
+    background-image: url(https://nerxxy.github.io/twitch-name-paints/webp/dragon.webp);
+    background-size: cover;
+    background-position: center;
+}
+[class*="member_"]:has([aria-label*="nerxxy."])::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.35) 40%);
+    border-radius: 8px;
+}
+
+/* 
+Pinned DMs and Pinned Messages
+*/
+[class*="pinnedChannels"]:not([class*="collapsed"]) {
+    color: white;
+}
+[class*="pinnedChannels"]>[class*="number"],
+[aria-label="Pinned Messages"]>div {
+    background-color: rgba(var(--black1), .2) !important;
+    color: white;
+}
+[aria-label="Pinned Messages"]>div> :nth-child(1) {
+    background-color: transparent !important;
+}
+[aria-label="Pinned Messages"]>div> :nth-child(2)>div>div {
+    background-color: rgba(var(--white1), .05);
+}
+
+/* 
+Emote Autocomplete Menu
+*/
+[class*="channelTextArea"]>[class*="auto"] {
+    background-color: rgba(var(--black1), .8);
+}
