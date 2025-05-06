@@ -44,13 +44,13 @@ Guild Nav - Server Count/Read All
 [data-list-id="guildsnav"]>div> :nth-child(1)> [class*="listItem"] {
     margin: 0px;
     margin-top: 0px;
-    padding: 0px;
+    padding: 0px !important;
     margin-bottom: 0px;
     color: hotpink;
 
     display: flex !important;
     justify-content: center !important;
-    margin: 0px 0 8px 0 !important;   /* top | right | bottom | left */
+    margin: 0px 0 0px 0 !important;   /* top | right | bottom | left */
     position: relative !important;
     width: 100% !important;
 }
