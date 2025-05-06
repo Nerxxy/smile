@@ -39,13 +39,35 @@ Remove Nitro Tab
 }
 
 /* 
-Weird Padding Around Servers And Read All
+Guild Nav - Server Count/Read All
 */
-.stack_dbd263.scroller_ef3116.none_d125d2.scrollerBase_d125d2>.listItem__650eb {
+[data-list-id="guildsnav"]>div> :nth-child(1)> [class*="listItem"] {
     margin: 0px;
-    margin-top: -5px;
+    margin-top: 0px;
     padding: 0px;
-    margin-bottom: 0px !important;
+    margin-bottom: 0px;
+    color: hotpink;
+
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0px 0 8px 0 !important;   /* top | right | bottom | left */
+    position: relative !important;
+    width: 100% !important;
+}
+[data-list-id="guildsnav"]>div> :nth-child(1) {
+    justify-content: initial !important;
+    align-content: initial !important;
+    align-items: initial !important;
+}
+[data-list-id="guildsnav"]>div> :nth-child(1)> [class*="server"] {
+    margin-top: -5px !important;
+}
+
+/* 
+Read All Button
+*/
+[data-list-id="guildsnav"]>div> :nth-child(1)>[class*=frame] [class*="button"] {
+    background-color: rgba(var(--white1), .1) !important;
 }
 
 /* 
@@ -81,13 +103,6 @@ Message Divider
 [data-list-id*="chat-"]>[role*="sep"]>[class*="end"]>svg>path {
     fill: #7700ff;
     color: #7700ff;
-}
-
-/* 
-Read All Button
-*/
-[data-list-id="guildsnav"]>div> :nth-child(1)>[class*=frame] [class*="button"] {
-    background-color: rgba(var(--white1), .1) !important;
 }
 
 /* 
@@ -154,4 +169,38 @@ Emote Autocomplete Menu
 */
 [class*="channelTextArea"]>[class*="auto"] {
     background-color: rgba(var(--black1), .8);
+}
+
+/* 
+Voice Activity
+*/
+[class*="-iconCurrentCall"],
+[class*="isCurrentUserConnected"]  {
+    background-color: transparent !important;
+}
+[class*="subText"] [class*="icon"] path {
+    fill: white;
+}
+
+/* 
+Folder Icon Colour 
+*/
+svg[name="Folder"] {
+    color: white !important;
+}
+[data-list-id="guildsnav"] [class*="folderHeader"] {
+    background-color: rgba(var(--black1), 0.3);
+}
+[data-list-id="guildsnav"] [class*="folderHeader"]:hover {
+    background-color: rgba(var(--white1), 0.2);
+}
+[data-list-id="guildsnav"] [class*="folderPreview_"]>div {
+    border-radius: 50%;
+}
+
+/* 
+Activity in Members List
+*/
+[class*="membersGroup"]:has([class*="toggle"]) {
+    display: none;
 }
