@@ -191,8 +191,12 @@ svg[name="Folder"] {
 [data-list-id="guildsnav"] [class*="folder"]:not([class*="isExpanded"]) [class*="folderHeader"]:hover {
     background-color: rgba(var(--white1), 0.1);
 }
-[data-list-id="guildsnav"] [class*="folderPreview"]:not([class*="folderPreview_"]) {
+[data-list-id="guildsnav"] [class*="folderPreview"]:not([class*="folderPreview_"]),
+[data-list-id="guildsnav"] [class*="folderHeader"]:hover {
     background-color: transparent;
+}
+[data-list-id="guildsnav"] [class*="folderIcon"]:hover {
+    background-color: rgba(var(--white1), 0.09) !important;
 }
 [data-list-id="guildsnav"] [class*="folderPreview_"]>div {
     border-radius: 50%;
