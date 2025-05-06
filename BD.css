@@ -195,8 +195,8 @@ svg[name="Folder"] {
 [data-list-id="guildsnav"] [class*="folderHeader"]:hover {
     background-color: transparent;
 }
-[data-list-id="guildsnav"] [class*="folder"]:not([class*="isHovering"]) [class*="folderIcon"]:hover {
-    background-color: rgba(var(--white1), 0.09) !important;
+[data-list-id="guildsnav"] [class*="folderIcon"]:hover:not([class*="folderIconWrapper"]) {
+    background-color: rgba(var(--white1), .1) !important;
 }
 [data-list-id="guildsnav"] [class*="folderPreview_"]>div {
     border-radius: 50%;
