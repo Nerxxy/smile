@@ -180,7 +180,7 @@ Voice Activity
 }
 
 /* 
-Folder Icon Colour 
+Folder Icon Colour / Active Background / Hover Background / Border Radius
 */
 svg[name="Folder"] {
     color: white !important;
@@ -188,8 +188,11 @@ svg[name="Folder"] {
 [data-list-id="guildsnav"] [class*="folderHeader"] {
     background-color: rgba(var(--black1), 0.3);
 }
-[data-list-id="guildsnav"] [class*="folderHeader"]:hover {
-    background-color: rgba(var(--white1), 0.2);
+[data-list-id="guildsnav"] [class*="folder"]:not([class*="isExpanded"]) [class*="folderHeader"]:hover {
+    background-color: rgba(var(--white1), 0.1);
+}
+[data-list-id="guildsnav"] [class*="folderPreview"]:not([class*="folderPreview_"]) {
+    background-color: transparent;
 }
 [data-list-id="guildsnav"] [class*="folderPreview_"]>div {
     border-radius: 50%;
