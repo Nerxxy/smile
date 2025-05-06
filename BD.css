@@ -204,3 +204,10 @@ Activity in Members List
 [class*="membersGroup"]:has([class*="toggle"]) {
     display: none;
 }
+
+/* 
+Unread Messages
+*/
+[data-list-id="guildsnav"] [id*="-unread-dms"]:has(div) {
+    margin-bottom: 9px;
+}
