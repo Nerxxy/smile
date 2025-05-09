@@ -63,7 +63,7 @@ Guild Nav - Server Count/Read All
 /*
 Join and Discover Buttons
 */
-[data-list-id="guildsnav"]>div> :nth-child(1)> [class*="tutorial"],
+[data-list-id="guildsnav"]>div> :nth-child(1)> [class*="tutorial"]:has([data-list-item-id*="create-join"]),
 [data-list-id="guildsnav"]>div> :nth-child(1)> [class*="listItem"]:has([data-list-item-id*="guild-discover"]) {
     margin: auto;
     display: none !important;
